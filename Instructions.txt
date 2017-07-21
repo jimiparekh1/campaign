@@ -1,0 +1,36 @@
+Note: The application is developed using Springboot and Maven.
+Jetty is used as application container.
+
+ -- Build the application
+ 
+ 1. Go to the base folder of the application
+ 2. Run maven command : mvn package
+ 3. Got to /target directory and verify the applicaiton jar 'campaigns-1.0.jar' is there.
+ 
+ -- Run the application.
+ 
+ 1. Go to the /target directory.
+ 2. Run the command: java -jar campaigns-1.0.jar
+ 
+ 
+ -- Test the Application.
+ 1. Adding a new Ad:
+ 
+ URL: POST : http://localhost:8080/ad
+ 
+ Body: eg.
+ {
+ "partnerId": "p1",
+ "duration": 100,
+ "adContent": "First ad"
+}
+
+
+2. Retrieving the ad:
+
+GET: http://localhost:8080/ad/p1
+
+--- Test Cases.
+
+Test are added as Integration Test using Spring framework.
+
